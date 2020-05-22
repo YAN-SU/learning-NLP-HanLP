@@ -1,0 +1,14 @@
+from pyhanlp import *
+
+# 不显示词性
+HanLP.Config.ShowTermNature = False
+
+# 可传入自定义字典 [dir1, dir2]
+segment = DoubleArrayTrieSegment()
+# 激活数字和英文识别
+segment.enablePartOfSpeechTagging(True)
+
+print(segment.seg("江西鄱阳湖干枯，中国最大淡水湖变成大草原"))
+print(segment.seg("上海市虹口区大连西路550号SISU"))
+
+#have installed java-jdk
